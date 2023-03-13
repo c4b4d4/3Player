@@ -1,0 +1,87 @@
+.nextSong
+{
+	background-image:url(#{$baseURL}player/next.svg);
+}
+
+.prevSong
+{
+	background-image:url(#{$baseURL}player/prev.svg);
+}
+
+.playSong
+{
+	background-image:url(#{$baseURL}player/play.svg);
+}
+
+.pauseSong
+{
+	background-image:url(#{$baseURL}player/pause.svg);
+}
+.pButton:hover, .vButton:hover
+{
+	transform: translateY(-1px);
+}
+.pButton
+{
+	min-width: 50px;
+	width:50px;
+	height: 50px;
+}
+
+
+
+.nextSong:not(.hasNext), .prevSong:not(.hasPrev)
+{
+	opacity:0.5;
+	pointer-events: none;
+}
+
+.thumbnail
+{
+	width: 35px;
+	height: 35px;
+	min-width: 35px;
+	border-radius: var(--radius);
+	background-color: rgba(0,0,0,0.1);
+	background-image: var(--image);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	
+}
+
+.volume_0
+{
+	background-image:url(#{$baseURL}player/volume_0.svg);
+}
+.volume_1
+{
+	background-image:url(#{$baseURL}player/volume_1.svg);
+}
+.volume_2
+{
+	background-image:url(#{$baseURL}player/volume_2.svg);
+}
+.volume_3
+{
+	background-image:url(#{$baseURL}player/volume_3.svg);
+}
+
+.vButton
+{
+	min-width: 20px;
+	width: 20px;
+	height: 20px;
+	margin-right: 15px;
+	margin-left: 15px;
+}
+.pButton, .vButton
+{
+	cursor:#{$clickCursor};
+	
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	--filtro:invert(var(--player-primary-invert));
+	filter: var(--filtro);
+}
